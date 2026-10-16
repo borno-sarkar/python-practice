@@ -94,8 +94,7 @@ fav_movies.append(mov2)
 fav_movies.append(mov3)
 print(fav_movies)
 
-# Practice Problem 2: WAP to check if a
-list contains a palindrome of elements.( Hint : use copy() method)
+# Practice Problem 2: WAP to check if a list contains a palindrome of elements.( Hint : use copy() method)
 
 list1 = [1,2,3,2,1]
 copy_list = list1.copy()
