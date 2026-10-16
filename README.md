@@ -76,3 +76,44 @@ if remainder == 0:
 else:
     print("Not a multiple")
     
+# ==========================================
+# Course: Apna College Python Tutorial
+# Instructor: Shraddha Khapra
+# Topic: Lecture 3 - Lists and Tuples
+# Solved by: Borno Sarkar
+# ==========================================
+
+# Practice Problem 1: WAP to ask the user to enter names of their 3 favorite movies & store them in a list.
+
+fav_movies = []
+mov1 = input("1st movie: ")
+mov2 = input("2nd movie: ")
+mov3 = input("3rd movie: ")
+fav_movies.append(mov1)
+fav_movies.append(mov2)
+fav_movies.append(mov3)
+print(fav_movies)
+
+# Practice Problem 2: WAP to check if a
+list contains a palindrome of elements.( Hint : use copy() method)
+
+list1 = [1,2,3,2,1]
+copy_list = list1.copy()
+copy_list.reverse()
+if(copy_list == list1):
+    print("Palindrome")
+else:
+    print("Not palindrome")
+
+# Practice Problem 3: WAP to count the number of students with the "A" grade in the following tuple.
+["C","D","A","A","B","B","A"]
+
+tup = ("C","D","A","A","B","B","A")
+print(tup.count("A"))
+
+# Practice Problem 4: WAP to store the above values in a list & short them from "A" to "D".
+
+list1 = ["C","D","A","A","B","B","A"]
+list1.sort()
+print(list1)
+
