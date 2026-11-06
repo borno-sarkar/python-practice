@@ -116,3 +116,41 @@ list1 = ["C","D","A","A","B","B","A"]
 list1.sort()
 print(list1)
 
+# ==========================================
+# Course: Apna College Python Tutorial
+# Instructor: Shraddha Khapra
+# Topic: Lecture 4 - Dictionary and set
+# Solved by: Borno Sarkar
+# ==========================================
+
+# Practice Problem 1: Store following word meanings in a python dictionary :table: " a piece of furniture", " list of facts and figures" cat : " a small animal "
+
+dictionary = {
+    "table": ["a piece of furniture", "list of facts & figures"],
+    "cat": "a small animal"
+}
+print(dictionary)
+
+# Practice Problem 2: You are given a list of subjects for students. Assume one classroom is required for 1 subject. How many classroom are needed by the all students.  "python", "java", "C++", "python", "JavaScript","java", " python ", "java", "C++", "C"
+
+subjects = {"python", "java", "C++", "python", "javascript", "java", "python", "java", "C++", "C"}
+print(len(subjects))
+
+# Practice Problem 3: WAP to enter marks of 3 subjects from the user and store them in a dictionary. Start with an empty dictionary & add one by one. Use subject name as key & marks as value.
+
+marks = {}
+x = int(input("Enter phy: "))
+marks.update({"phy": x})
+
+x = int(input("Enter chem: "))
+marks.update({"chem": x})
+
+x = int(input("Enter math: "))
+marks.update({"math": x})
+
+print(marks)
+
+# Practice Problem 4: Figure out a way to store 9 and 9.0 as separate values in the set. (You can take help of built-in data types)
+
+values = {"9.0", "9"}
+print(values)
