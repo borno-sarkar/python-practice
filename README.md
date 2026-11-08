@@ -202,3 +202,21 @@ while i < len(nums):
         break
     i += 1
     
+# 6. Print the elements of the following list using a for loop
+nums = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+
+for el in nums:
+    print(el)
+
+
+# 7. Search for a number x in this tuple/list using a for loop
+nums = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+x = int(input("Enter number: "))
+
+idx = 0
+for el in nums:
+    if el == x:
+        print("found at index", idx)
+        break
+    idx += 1
+    
