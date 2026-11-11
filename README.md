@@ -257,3 +257,54 @@ for i in range(1, n + 1):
     fact *= i
 
 print("Factorial:", fact)
+
+# ==========================================
+# Course: Apna College Python Tutorial
+# Instructor: Shraddha Khapra
+# Topic: Lecture 6 - Functions and Recursion 
+# Solved by: Borno Sarkar
+# ==========================================
+
+# 1. WAF to print the length of a list. (list is the parameter)
+def print_len(lst):
+    print("Length of list:", len(lst))
+
+
+cities = ["Dhaka", "Khulna", "Rajshahi", "Sylhet", "Chattogram"]
+print_len(cities)
+
+print("-" * 30)
+
+# 2. WAF to print the elements of a list in a single line. (list is the parameter)
+def print_list(lst):
+    for item in lst:
+        print(item, end=" ")
+    print()  # For new line
+
+
+heroes = ["Batman", "Superman", "Spiderman", "Ironman"]
+print_list(heroes)
+
+print("-" * 30)
+
+# 3. WAF to find the factorial of n. (n is the parameter)
+def calc_fact(n):
+    fact = 1
+    for i in range(1, n + 1):
+        fact *= i
+    print(f"Factorial of {n} is:", fact)
+
+
+calc_fact(5)
+calc_fact(10)
+
+print("-" * 30)
+
+# 4. WAF to convert USD to INR.
+def converter(usd_val):
+    inr_val = usd_val * 83  # 1 USD ≈ 83 INR
+    print(f"{usd_val} USD = {inr_val} INR")
+
+
+converter(5)
+converter(20)
