@@ -308,3 +308,34 @@ def converter(usd_val):
 
 converter(5)
 converter(20)
+
+# 5. Write a recursive function to calculate the sum of first n natural numbers.
+def calc_sum(n):
+    # Base Case: যখন n এর মান 0 হয়ে যাবে, তখন 0 রিটার্ন করবে
+    if n == 0:
+        return 0
+    # Recursive Case: n এর সাথে আগের সংখ্যাগুলোর যোগফল যোগ করা
+    return calc_sum(n - 1) + n
+
+
+# টেস্ট করার জন্য:
+print("Sum of first 6 natural numbers:", calc_sum(6))
+
+print("-" * 30)
+
+# 6. Write a recursive function to print all elements in a list. (using list & index)
+def print_elem(lst, idx):
+    # Base Case: ইনডেক্স লিস্টের দৈর্ঘ্যের সমান হলে থেমে যাবে
+    if idx == len(lst):
+        return
+
+    # বর্তমান ইনডেক্সের আইটেম প্রিন্ট করা
+    print(lst[idx])
+
+    # Recursive Case: ইনডেক্স ১ বাড়িয়ে পরের আইটেমের জন্য কল করা
+    print_elem(lst, idx + 1)
+
+
+# টেস্ট করার জন্য:
+heroes = ["Batman", "Superman", "Spiderman"]
+print_elem(heroes, 0)  # ইনডেক্স 0 থেকে শুরু হবে
