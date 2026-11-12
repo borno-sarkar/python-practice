@@ -339,3 +339,40 @@ def print_elem(lst, idx):
 # টেস্ট করার জন্য:
 heroes = ["Batman", "Superman", "Spiderman"]
 print_elem(heroes, 0)  # ইনডেক্স 0 থেকে শুরু হবে
+
+# ==========================================
+# Course: Apna College Python Tutorial
+# Instructor: Shraddha Khapra
+# Topic: Lecture 7 - File Input and Output 
+# Solved by: Borno Sarkar
+# ==========================================
+
+# 1. Create a new file "practice.txt" and add data
+with open("practice.txt", "w") as f:
+    f.write("Hi everyone\n")
+    f.write("we are learning File I/O\n")
+    f.write("using Java.\n")
+    f.write("I like programming in Java.")
+
+print("File created and data written successfully!")
+
+
+# 2. Function/Code to replace all occurrences of "Java" with "python"
+with open("practice.txt", "r") as f:
+    content = f.read()
+    new_content = content.replace("Java", "python").replace("java", "python")
+
+with open("practice.txt", "w") as f:
+    f.write(new_content)
+
+print("Replacement successful!")
+
+
+# 3. Search if the word "learning" exists in the file or not
+with open("practice.txt", "r") as f:
+    data = f.read()
+    if "learning" in data:
+        print("Found")
+    else:
+        print("Not found")
+        
