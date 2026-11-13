@@ -375,4 +375,38 @@ with open("practice.txt", "r") as f:
         print("Found")
     else:
         print("Not found")
-        
+
+
+# 4. WAF to find in which line of the file does the word "learning" occur first
+def check_for_line():
+    word = "learning"
+    data = True
+    line_no = 1
+    
+    with open("practice.txt", "r") as f:
+        while data:
+            data = f.readline()
+            if word in data:
+                print("Line number:", line_no)
+                return
+            line_no += 1
+            
+    print(-1)
+
+check_for_line()
+
+
+# 5. From a file containing numbers separated by comma, print the count of even numbers
+with open("number.txt", "w") as f:
+    f.write("12, 7, 4, 9, 10, 33, 6")
+
+with open("number.txt", "r") as f:
+    data = f.read()
+    numbers = data.split(",")
+    
+    count = 0
+    for num in numbers:
+        if int(num) % 2 == 0:
+            count += 1
+
+print("Total even numbers:", count)
