@@ -410,3 +410,44 @@ with open("number.txt", "r") as f:
             count += 1
 
 print("Total even numbers:", count)
+
+# ==========================================
+# Course: Apna College Python Tutorial
+# Instructor: Shraddha Khapra
+# Topic: Lecture 8 - OOPS
+# Solved by: Borno Sarkar
+# ==========================================
+
+# 1. Create student class that makes name & marks of 3 subjects as arguments in constructor. Then create a method to print the average.
+class Student:
+	def __init__(self, name, marks):
+		self.name = name
+		self.marks = marks
+		
+	def get_average(self):
+		avg = sum(self.marks)/3
+		print("Average: ", avg)
+		
+s1 = Student("Borno", [85, 90, 78])
+s1.get_average()
+
+# 2. Create Account class with two attributes- balance & account no. Create methods for debit, credit, & and printing the balance.
+class Account:
+    def __init__(self, balance, acc_no):
+        self.balance = balance
+        self.acc_no = acc_no
+
+    def credit(self, amount):
+        self.balance += amount
+
+    def debit(self, amount):
+        self.balance -= amount
+
+    def show_balance(self):
+        print("Account", self.acc_no, "balance:", self.balance)
+
+# অবজেক্ট তৈরি এবং টেস্ট করা
+a1 = Account(1000, 12345)
+a1.credit(500)
+a1.debit(200)
+a1.show_balance()
