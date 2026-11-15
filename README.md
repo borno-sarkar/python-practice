@@ -451,3 +451,50 @@ a1 = Account(1000, 12345)
 a1.credit(500)
 a1.debit(200)
 a1.show_balance()
+
+
+# 3. Define a Circle class to create a circle with radius r using the constructor.
+# Define an Area() method of the class which calculates the area of the circle.
+# Define a Perimeter() method of the class which allows you to calculate the perimeter of the circle.
+
+class Circle:
+    def __init__(self, radius):
+        self.radius = radius
+
+    def area(self):
+        return (22/7) * self.radius ** 2
+
+    def perimeter(self):
+        return 2 * (22/7) * self.radius
+
+# অবজেক্ট তৈরি এবং টেস্ট করা
+c1 = Circle(5)
+print("Area:", c1.area())
+print("Perimeter:", c1.perimeter())
+
+
+# 4. Define a Employee class with attributes role, department & salary. This class also a showDetails() method.
+# Create an Engineer class that inherits properties from Employee & has additional attributes : name & age.
+
+class Employee:
+    def __init__(self, role, department, salary):
+        self.role = role
+        self.department = department
+        self.salary = salary
+
+    def showDetails(self):
+        print("role:", self.role)
+        print("department:", self.department)
+        print("salary:", self.salary)
+
+class Engineer(Employee):
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        super().__init__("Engineer", "Development", "75,000")
+
+# অবজেক্ট তৈরি এবং টেস্ট করা
+engg1 = Engineer("Elon musk", 40)
+print("Name:", engg1.name)
+print("Age:", engg1.age)
+engg1.showDetails()
