@@ -498,3 +498,22 @@ engg1 = Engineer("Elon musk", 40)
 print("Name:", engg1.name)
 print("Age:", engg1.age)
 engg1.showDetails()
+
+
+# 5. Create a class called Order which stores item & its price.
+# Use Dunder function __gt__() to convey that:
+# order1 > order2 if price of order1 > price of order2
+
+class Order:
+    def __init__(self, item, prize):
+        self.item = item
+        self.prize = prize
+
+    def __gt__(self, other):
+        return self.prize > other.prize
+
+# অবজেক্ট তৈরি এবং টেস্ট করা
+Order1 = Order("Chips", 50)
+Order2 = Order("Tea", 20)
+
+print(Order1 > Order2)
